@@ -25,7 +25,35 @@ console.log(os.homedir());  //It returns the absolute path of the current user's
 
 console.log(os.hostname());  //It returns the system hostname as a string — the network name assigned to the device. . //Laptop-E31CGJ0E
 
-console.log(os.loadavg());
+console.log(os.loadavg()); //A method of the os module that returns an array of 3 numbers representing the 1-minute, 5-minute, and 15-minute load averages of the system.
+
+console.log(os.machine());  // This method returns a string identifying the hardware machine architecture, like 'x86_64', 'arm64', etc.
+
+console.log(os.networkInterfaces()); // This method returns an object containing information about each network interface on the system, such as IP addresses, MAC addresses, and interface types.
+
+console.log(os.platform()); //This method returns a string identifying the OS platform Node.js is running on.
+
+
+console.log(os.release());  //This method returns a string identifying the OS kernel version or release number.
+
+console.log(os.tmpdir());  //A method that returns the absolute path of the directory where temporary files should be stored.
+
+
+console.log(os.totalmem()); // A method that returns the total physical memory available on the system in bytes.
+
+console.log(os.type());  //Returns the name of the operating system kernel, similar to the output of the Unix uname -s command.
+
+console.log(os.uptime()); //This method returns the system uptime, which is the amount of time the system has been running since the last reboot.
+
+console.log(os.userInfo([options]));  //This method returns an object containing details about the current user's information, such as username, home directory, and shell.
+
+
+
+
+
+
+
+
 
 
 
