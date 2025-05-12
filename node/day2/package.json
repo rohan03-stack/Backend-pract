@@ -10,6 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "is-even": "^1.0.0"
+    "armstrong-react": "^4.0.0-pre34",
+    "factorial": "^2.0.0",
+    "is-even": "^1.0.0",
+    "is-palindrome": "^0.3.0",
+    "prime-number": "^2.0.0"
   }
 }
