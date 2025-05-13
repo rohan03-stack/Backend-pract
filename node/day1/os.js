@@ -1,4 +1,4 @@
-const { log } = require("console");
+// const { log } = require("console");
 const os = require("os")
 
 console.log(os.freemem());  //number
@@ -45,7 +45,8 @@ console.log(os.type());  //Returns the name of the operating system kernel, simi
 
 console.log(os.uptime()); //This method returns the system uptime, which is the amount of time the system has been running since the last reboot.
 
-console.log(os.userInfo([options]));  //This method returns an object containing details about the current user's information, such as username, home directory, and shell.
+// console.log(os.userInfo([options]));  //This method returns an object containing details about the current user's information, such as username, home directory, and shell.
+
 
 
 
