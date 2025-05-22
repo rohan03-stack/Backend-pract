@@ -18,7 +18,7 @@ const server = http.createServer((req, res) => {
    if(err) {
     res.end(err);
    }else{
-    res.end(data);
+    
    }
    })
    
