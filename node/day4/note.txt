@@ -1,0 +1,4 @@
+Q1, why we use end() in http server?
+ans:- Calling the writable.end() methhod  signal that no more data will be written to the Writable. The optional Chunk and Encoding arguments allow one final additional chunk of the data to written immediately before closing the steam
+
+Calling the write method after calling end will raise an error
