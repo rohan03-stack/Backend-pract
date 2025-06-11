@@ -2,7 +2,8 @@ const express = require('express');
 
 const app = express();
 
-app.use (express.jason());
+app.use (express.json());
+
 
 app.get('/', (req, res) => {
     res.send('accepted data...')
