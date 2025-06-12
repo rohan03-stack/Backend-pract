@@ -69,8 +69,13 @@ app.post('/create', (req, res) => {
 
 
 app.post('/append', (req, res) => {
-  fs.appendFileSync('students.txt', req.body + '', 'utf-8');
+  fs.appendFileSync('students.txt', req.body + '/n', 'utf-8');
   res.send('data appended...');
+});
+
+app.delete('/del', (req, res) => {
+  fs.rmSync('students.txt');
+  res.send('data deleted');
 });
 
 
