@@ -1,32 +1,31 @@
-const express = require('express')
+const express = require('express');
 
-const port = 9500;
+const fs = require('fs');
+
+const port = 9000;
 
 const app = express();
 
+
+// example 1..
+
 app.use((req, res, next) => {
-console.log('hello i am from MiddleWare');
-next();
-console.log('i am next to the middlewarw function');
-
-
-});
-
-
-app.use((req,res, next) => {
-    // if(3 +2 == 5) {
-    //     res.send('bye')
-    // }else{
-    // next();
-    // }
-
-    let auth = false;
-    if(!auth) {
-        res.send('your ar not authorized!!! please authenticate...')
-    }else {
-        next();
-    }
+    const startTime = new Date().getTime();
+    next();
+    const endTime = new Date().getTime();
+    console.log(endTime - startTime);
+    
 })
+
+const watchMan = (req, res, next) => {
+    if(req.url == '/about') {
+        next();
+    }else {
+        res.send('please come late...')
+    }
+}
+
+app.use(watchMan);
 
 app.get('/' , (req, res) => {
     console.log('hello i am from base route');
