@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon simpleMiddleware.js",
-    "start2": "nodemon TimeTakenware.js"
+    "start2": "nodemon TimeTakenware.js",
+    "start3": "nodemon flowMeddileware.js"
   },
   "keywords": [],
   "author": "",
