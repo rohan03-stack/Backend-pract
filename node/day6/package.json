@@ -6,12 +6,15 @@
   "scripts": {
     "start": "nodemon simpleMiddleware.js",
     "start2": "nodemon TimeTakenware.js",
-    "start3": "nodemon flowMeddileware.js"
+    "start3": "nodemon flowMeddileware.js",
+    "start4": "nodemon custom.js",
+    "start5" : "nodemon Middleware.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^5.1.0",
     "nodemon": "^3.1.10"
   }
