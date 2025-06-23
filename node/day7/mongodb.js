@@ -14,18 +14,14 @@ app.get("/weather", (req,res) => {
   const city = req.query.city;
   const weather = data[city];
   res.send(`Today weather in ${city} is ${weather}`)
+
+
 })
 
-
-
-
-
-
-
-
-
-
-
+  app.get("/students/:studentId", (req, res) => {
+  const ID = req.params.studentId;
+  res.send(`Here is the data od student who's ID is ${ID}`);
+});
 
 
 app.listen(Port, () => {
