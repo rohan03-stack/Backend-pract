@@ -2,11 +2,15 @@ const express = require("express");
 const Port = 8900;
 const app = express();
 
+const { dataAddedRouter } = require('./Routes/dataAdd.routes');
+
 app.use(express.json());
+
+app.use('/data', dataAddedRouter);
 
 app.get("/weather", (req,res) => {
     const data = {
-        bangolre: "winter",
+        banglore: "winter",
         california: "spring",
         london: "summery"
     };
