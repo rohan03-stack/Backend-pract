@@ -1,10 +1,9 @@
 
 
+import {configureStore} from '@reduxjs/toolkit'
+import signupFun from'../Features/signUpReducer'
 
-import {configueStore} from ('@reduxjs/toolkit')
-import signupFun from'../Features/SignIn/SignUpReducer'
-
-export const store = configueStore({
+export const store = configureStore({
     reducer: {
         sign:signupFun
     }

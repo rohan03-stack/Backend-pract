@@ -1,10 +1,14 @@
 const express = require("express");
 require("dotenv").config();
+const cors = require('cors');
+const jwt = require("jsonwebtoken");
 
 const {Connections} = require("./config/db")
 const {UserModule}  = require("./model/Usermodel")
 
 const app = express();
+
+app.use(cors())
 
 app.use(express.json());
 
@@ -14,22 +18,24 @@ app.get("/", (req, res) => {
 
 app.post("/signup", async (req, res) => {
   const payload = req.body;
+  console.log(payload);
+  
   
   try {
-    const users = new UserModule(payload);
+    const users =  new UserModule(payload);
     await users.save();
     res.send("Signup Succesfull...");
   } catch (err) {
     console.log(err);
     res.send("something went wrong! please try again leater...");
   }
-});
+  });
 
 app.post("/login", async (req, res) => {
   const { email, password } = req.body;
   try {
-    const checkUserDetails = await UserModule.find({ email, password }); // here we pass the email/pas into the find is useing and-operator
-    console.log('🚀 ~ checkUserDetails:', checkUserDetails);
+    const checkUserDetails = await UserModule.find({ email, password });
+    console.log('~ checkUserDetails:', checkUserDetails);
     if (checkUserDetails.length > 0) {
       const token = jwt.sign({ course: "nxm" }, "hush");
       res.send({ msg: "login Succesfull...", token: token });

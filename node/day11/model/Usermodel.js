@@ -1,15 +1,15 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose')
 
 const userschema = mongoose.Schema(
     {
         name: String,
-        age:Number,
+        // age:Number,
         email: String,
-        password:String,
+        password: String,
     },
-    {versionKey: false}
+    { versionKey: false }
 );
 
-const UserModule = mongoose.model("sign_in",userschema)
+const UserModule = mongoose.model("sign_in", userschema)
 
-module.exports = {UserModule};
+module.exports = { UserModule };

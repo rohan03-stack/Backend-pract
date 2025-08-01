@@ -1,6 +1,6 @@
 import React, { use, useState } from 'react'
 import{useDispatch} from 'react-redux'
-import {signUpThunk} from '../Features/SignIn/SignUpReducer'
+import {signUpThunk} from '../Features/signUpReducer'
 
 export const SignUp = () => {
     const dispatchSignUp   = useDispatch();
@@ -45,7 +45,7 @@ export const SignUp = () => {
 
   return (
     <>
-         <form onSubmit={handleSubmit} style={{ border: "1px solid red", display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+         <form onSubmit={handleSubmit} >
                
 
                 {

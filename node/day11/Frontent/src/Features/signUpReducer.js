@@ -25,7 +25,7 @@ export const signUpThunk  = (formData) => async (dispatch) => {
             body: JSON.stringify(formData),
             headers:{"Content-Type": "application/json"}
         });
-           const result = await response.json();
+           const result = await response.text();
         console.log(" API response:", result);
         dispatch(signIns(result)); 
     }
